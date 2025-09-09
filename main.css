@@ -1,13 +1,5 @@
 root {
     font-family: "Inter", sans-serif;
     font-size: 16px;
-
-    --light--blue: #CFFAFE; /* for circle bg */
-    --dark--blue: #0876DD; /* for button */
-    --text--title--black: #111827; 
-    --text--body--black: #374151;
-    --text--body--white: #FFFFFF; /* for bg as well */
-    --text--grey: #9CA3AF; /* footer */
-    --footer--: #111827;
 }
 
