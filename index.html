@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
     <link href="./main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,8 +28,8 @@
 </head>
 
 <body>
-    <header>
-        <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 bg-transparent">
+    <header class="fixed inset-x-0 top-0 z-20 bg-transparent">
+        <nav aria-label="header" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <img src="./asset/Logo.svg" alt="" class="h-8 w-auto" />
@@ -41,24 +42,25 @@
     </header>
 
     <main>
-        <section class="container1 relative">
+        <section class="container1 relative pt-24">
             <!-- dec -->
-                 <div class="absolute lg:top-0 lg:left-200 lg:-z-10">
-                    <img src="./asset/Ellipse.svg" alt="">
-                 </div>
+            <div class="absolute lg:top-0 lg:left-200 lg:-z-10 sm:top-20 sm:left-4">
+                <img src="./asset/Ellipse.svg" alt="circle" class="lg:w-full h-auto">
+            </div>
+
             <div class="relative isolate px-6 lg:px-8 lg:flex items-center lg:justify-between gap-32">
                 <!-- text -->
-                <div class="lg:ml-16 sm:mx-4 max-w-2xl sm:py-16 lg:py-32">
+                <div class="lg:ml-16 sm:mx-4 w-full py-16 lg:py-32">
                     <div class="text-left">
-                        <h1 class="lg:text-6xl sm:text-base font-semibold tracking-tight text-balance text-[var(--text--title--black)]">Event Registration Reimagined</h1>
+                        <h1 class="text-4xl lg:text-6xl font-semibold tracking-tight text-balance text-[var(--text--title--black)]">Event Registration Reimagined</h1>
                         <p class="mt-6 lg:text-base font-regular text-pretty text-[var(--text--body--black)] sm:text-xl/8">Manage your event registrations hassle free and without any dependency with the technical team. Isn’t it sounds amazing?</p>
                         <div class="mt-10 flex items-left justify-left">
-                            <button class="px-4 py-2 bg-[var(--dark--blue)] hover:bg-[var(--text--body--black)] text-sm/6 font-semibold text-white rounded-lg"> Get Early access </button>
+                            <button class="px-4 py-2 bg-[var(--dark--blue)] hover:bg-[var(--text--body--black)] text-sm/6 font-semibold text-white rounded-lg animate__animated animate__jello"> Get Early access </button>
                         </div>
                     </div>
                 </div>
                 <!-- photo container -->
-                <div class="lg:mr-16 grid gap-0.5 grid-cols-3 grid-rows-3 items-center justify-center">
+                <div class="animate__animated animate__fadeInDown lg:mr-16 grid gap-0.5 grid-cols-3 grid-rows-3 items-center justify-center mt-20 lg:mt-10">
                     <div class="relative row-span-3">
                         <img src="./asset/badge.png" alt="">
                         <img src="./asset/registration-graph.png" alt="">
@@ -87,14 +89,14 @@
             <div class="flex flex-col items-center lg:justify-between ">
             <!-- text -->
                 <div class="text-center">
-                    <h1 class="lg:text-6xl font-semibold tracking-tight text-balance text-[var(--text--title--black)] sm:text-7xl">All-in-one Event Platform</h1>
+                    <h1 class="text-4xl lg:text-6xl font-semibold tracking-tight text-balance text-[var(--text--title--black)]">All-in-one Event Platform</h1>
                     <p class="mt-2 lg:text-base font-regular text-pretty text-[var(--text--body--black)] sm:text-xl/8">Deliver an exceptional event experience</p>
                 </div>
             
             <!-- img -->
                 <div class="mt-12 px-8 relative flex flex-col items-center lg:justify-between">
                     <img src="./asset/video-thumbnail.png">
-                    <button class="absolute -bottom-10 sm:bottom-4 flex flex-row gap-1.5 px-5 py-3 bg-[var(--text--body--white)] hover:bg-[var(--divider)] text-sm/6 font-semibold text-[var(--text--title--black)] rounded-full shadow"> 
+                    <button class="absolute -bottom-5 lg:-bottom-5 flex flex-row gap-1.5 px-5 py-3 bg-[var(--text--body--white)] hover:bg-[var(--divider)] text-sm/6 font-semibold text-[var(--text--title--black)] rounded-full shadow"> 
                         <img src="./asset/play-icon.svg" alt="play icon">See it in action (2 min)
                     </button>
                 </div>
