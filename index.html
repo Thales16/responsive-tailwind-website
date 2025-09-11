@@ -1,39 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
+    <link href="./main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        :root {
+        --light--blue: #CFFAFE; /* for circle bg */
+        --dark--blue: #0876DD; /* for button */
+        --text--title--black: #111827; 
+        --text--body--black: #374151;
+        --text--body--white: #FFFFFF; /* for bg as well */
+        --text--grey: #9CA3AF; /* footer */
+        --footer--: #111827;
+        --divider: #E5E7EB;
+        }
+    </style>
 
+</head>
+
+<body>
+    <header class="fixed inset-x-0 top-0 z-100 bg-transparent">
+        <nav aria-label="header" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <img src="./asset/Logo.svg" alt="" class="h-8 w-auto" />
+                </a>
+            </div>
+            <div class="lg:flex lg:flex-1 lg:justify-end">
+                <button
+                    class="px-4 py-2 bg-[var(--dark--blue)] hover:bg-[var(--text--body--black)] text-sm/6 font-semibold text-white rounded-lg">
+                    Get Early access </button>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <div class="container1">
+        <section class="container1 relative pt-24 overflow-hidden">
+            <!-- dec -->
+            <div class="absolute top-120 -right-16 lg:-top-40 lg:-right-16 lg:-z-10 ">
+                <img src="./asset/Ellipse.svg" alt="circle" class="w-2.5/3 lg:w-full h-auto">
+            </div>
 
+            <div class="relative isolate px-6 lg:px-8 lg:flex items-center lg:justify-between gap-32">
+                <!-- text -->
+                <div class="lg:ml-16 sm:mx-4 w-full py-16 lg:py-32">
+                    <div class="text-left">
+                        <h1
+                            class="text-4xl lg:text-6xl font-semibold tracking-tight text-balance text-[var(--text--title--black)]">
+                            Event Registration Reimagined</h1>
+                        <p
+                            class="mt-6 lg:text-base font-regular text-pretty text-[var(--text--body--black)] sm:text-xl/8">
+                            Manage your event registrations hassle free and without any dependency with the technical
+                            team. Isn’t it sounds amazing?</p>
+                        <div class="mt-10 flex items-left justify-left">
+                            <button
+                                class="px-4 py-2 bg-[var(--dark--blue)] hover:bg-[var(--text--body--black)] text-sm/6 font-semibold text-white rounded-lg animate__animated animate__jello">
+                                Get Early access </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- photo container -->
+                <div
+                    class="animate__animated animate__fadeInDown lg:mr-16 grid gap-0.5 grid-cols-3 grid-rows-3 items-center justify-center mt-20 lg:mt-10">
+                    <div class="relative row-span-3">
+                        <img src="./asset/badge.png" alt="">
+                        <img src="./asset/registration-graph.png" alt="">
+                    </div>
+                    <div class="relative row-span-3">
+                        <img src="./asset/speaker-card.png" alt="">
+                        <img src="./asset/registrations-split-count.png" alt="">
+                        <img src="./asset/ticket.png" alt="">
+                    </div>
+                    <div class="relative row-span-3">
+                        <img src="./asset/attendees.png" alt="">
+                        <img src="./asset/ticket-sales.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- seperate line -->
+        <div>
+            <hr class="border-t border-[var(--divider)] mx-30 my-20">
         </div>
 
-        <div class="container2">
 
-        </div>
+        <section class="container2">
+            <span></span>
+            <div class="flex flex-col items-center lg:justify-between ">
+                <!-- text -->
+                <div class="text-center px-9">
+                    <h1
+                        class="text-4xl lg:text-6xl font-semibold tracking-tight text-balance text-[var(--text--title--black)]">
+                        All-in-one Event Platform</h1>
+                    <p class="mt-2 lg:text-base font-regular text-pretty text-[var(--text--body--black)] sm:text-xl/8">
+                        Deliver an exceptional event experience</p>
+                </div>
 
+                <!-- img -->
+                <div class="mt-12 px-8 relative flex flex-col items-center lg:justify-between">
+                    <img src="./asset/video-thumbnail.png">
+                    <button
+                        class="absolute -bottom-5 lg:-bottom-5 flex flex-row gap-1.5 px-5 py-3 bg-[var(--text--body--white)] hover:bg-[var(--divider)] text-sm/6 font-semibold text-[var(--text--title--black)] rounded-full shadow">
+                        <img src="./asset/play-icon.svg" alt="play icon">See it in action (2 min)
+                    </button>
+                </div>
+            </div>
+        </section>
         <!-- Thales part -->
-        <div class="container3">
+        <div class="container3 bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__heartBeat">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 relative z-10">
 
+                    <!-- Card 1 -->
+                    <div
+                        class="flex flex-row sm:flex-col items-center text-left sm:text-center p-6 bg-white rounded-xl">
+                        <div
+                            class="p-2 rounded-full flex items-center justify-center mb-0 sm:mb-4 mr-4 sm:mr-0 icon-container">
+                            <img src="asset/Feature Icon.png" alt="Icone de Métricas" class=" object-contain" />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Event Metrics</h3>
+                            <p class="text-gray-600">Track your ticket sales, attendees count and more with much ease.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="flex flex-row sm:flex-col items-center text-left sm:text-center p-6 bg-white rounded-xl">
+                        <div
+                            class="p-2 rounded-full flex items-center justify-center mb-0 sm:mb-4 mr-4 sm:mr-0 icon-container">
+                            <img src="asset/Feature Icon2.png" alt="Icone de Ingressos" class="object-contain" />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Registration & Ticketing</h3>
+                            <p class="text-gray-600">Manage your Event registrations and ticket sales easier and receive
+                                payments instantly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="flex flex-row sm:flex-col items-center text-left sm:text-center p-6 bg-white rounded-xl">
+                        <div
+                            class="p-2 rounded-full flex items-center justify-center mb-0 sm:mb-4 mr-4 sm:mr-0 icon-container">
+                            <img src="asset/Feature Icon3.png" alt="Icone de Crachás" class="object-contain" />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Branded Badges</h3>
+                            <p class="text-gray-600">Create your custom branded badges for your events and get them
+                                printed.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="flex flex-row sm:flex-col items-center text-left sm:text-center p-6 bg-white rounded-xl">
+                        <div
+                            class="p-2 rounded-full flex items-center justify-center mb-0 sm:mb-4 mr-4 sm:mr-0 icon-container">
+                            <img src="asset/Feature Icon4.png" alt="Icone de Aplicativo" class="object-contain" />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Organiser App</h3>
+                            <p class="text-gray-600">Manage your events at the palm of your hand with our Organiser App.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="flex flex-row sm:flex-col items-center text-left sm:text-center p-6 bg-white rounded-xl">
+                        <div
+                            class="p-2 rounded-full flex items-center justify-center mb-0 sm:mb-4 mr-4 sm:mr-0 icon-container">
+                            <img src="asset/Feature Icon5.png" alt="Icone de Engajamento" class="object-contain" />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Attendee Engagement</h3>
+                            <p class="text-gray-600">Engage with your attendees via email, surveys and much more.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="flex flex-row sm:flex-col items-center text-left sm:text-center p-6 bg-white rounded-xl">
+                        <div
+                            class="p-2 rounded-full flex items-center justify-center mb-0 sm:mb-4 mr-4 sm:mr-0 icon-container">
+                            <img src="asset/Feature Icon6.png" alt="Icone de Calendario" class="object-contain" />
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900">Add to Calendar</h3>
+                            <p class="text-gray-600">Effortless way to add your events to registered users calendars by
+                                1-click.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
+        <div>
 
-        <div class="container4">
-            
-        </div>
-    </main>
+            <!-- container4 -->
 
-    <footer>
+            <div class="container4 relative overflow-hidden pb-20">
+                <div>
+                    <hr class="border-t border-[var(--divider)] mx-30">
+                </div>
 
-    </footer>
+                <div class="absolute -top-30 lg:left-36 lg:-top-100 w-full px-5">
+                    <img src="./asset/Ellipse.svg">
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center justify-between relative lg:ml-28">
+                    <!-- Texto -->
+                    <div class="relative text-center lg:text-left z-20 py-20">
+                        <h1
+                            class="text-4xl lg:text-6xl font-semibold tracking-tight text-balance text-[var(--text--title--black)]">
+                            Integrate with your <br /> favorite tools
+                        </h1>
+                        <p
+                            class="mt-10 lg:text-base font-regular text-pretty text-[var(--text--body--black)] sm:text-xl/8 px-10 lg:px-0 ">
+                            Connect RegiM with your most favorite sales and marketing tools
+                        </p>
+                    </div>
+
+                    <!-- Logos -->
+                    <div class="lg:w-1/2 flex flex-col justify-center gap-y-6 z-10 px-6">
+                        <div class="flex justify-center gap-6 lg:gap-20">
+                            <img src="asset/Logo (1).png" alt="Logo 1" class="rounded-full shadow-lg" />
+                            <img src="asset/Logo2.png" alt="Logo 2" class="rounded-full shadow-lg" />
+                            <img src="asset/Logo3.png" alt="Logo 3" class="rounded-full shadow-lg" />
+                            <img src="asset/Logo4.png" alt="Logo 4" class="rounded-full shadow-lg" />
+                        </div>
+                        <div class="flex justify-center gap-6 lg:gap-20">
+                            <img src="asset/Logo5.png" alt="Logo 5" class="rounded-full shadow-lg" />
+                            <img src="asset/Logo6.png" alt="Logo 6" class="rounded-full shadow-lg" />
+                            <img src="asset/Logo7.png" alt="Logo 7" class="rounded-full shadow-lg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+
+            <footer class="bg-gray-900 text-gray-300">
+                <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+                    <div class="text-center">
+                        <h1
+                            class="text-4xl lg:text-6xl font-semibold tracking-tight text-balance text-[var(--text--title--white)]">
+                            Create your event with RegiM
+                        </h1>
+                        <p class="mt-6 text-lg leading-8 text-gray-300">
+                            Leveraging our virtual and live event experience, Hubilo offers everything you need to set
+                            up <br />
+                            your next hybrid event from registration to executing a flawless event.
+                        </p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <button
+                                class="px-4 py-2 bg-[var(--dark--blue)] hover:bg-[var(--text--body--black)] text-sm/6 font-semibold text-white rounded-lg">
+                                Get Early access </button>
+                        </div>
+                    </div>
+
+                    <!-- divider -->
+                     <div class="divider relative">
+                        <div>
+                            <hr class="relative border-t-1 border-white/10 mx-30 my-20">
+                        </div>
+                    
+                    <!-- Logo central absoluta -->
+                        <div class="absolute left-1/2 -top-5 transform -translate-x-1/2">
+                            <img src="asset/Logomark.svg" alt="Logo RegiM" class="w-auto">
+                        </div>
+                    </div>
+
+                    <!-- Rodapé -->
+                    <div class="mt-20 relative flex flex-col sm:flex-row items-center justify-between text-sm gap-8">
+
+                        <!-- Esquerda -->
+                        <div class="flex items-center gap-2">
+                            <p>&copy; RegiM 2022. Made with love by</p>
+                            <a href="#" class="font-semibold text-white hover:text-gray-400">Landify</a>
+                        </div>
+
+                        <!-- Direita -->
+                        <div class="flex items-center gap-1">
+                            <p>For further details, drop a mail to</p>
+                            <a href="mailto:hello@landify.design"
+                                class="font-semibold text-white hover:text-gray-400">hello@landify.design</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
 </body>
+
 </html>
